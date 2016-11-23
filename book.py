@@ -7,7 +7,7 @@ while True:
     page = requests.get('https://in.bookmyshow.com/buytickets/kabali-telugu-hyderabad/movie-hyd-ET00041490-MT/20160808')
     tree = html.fromstring(page.content)
     theatres = tree.xpath('//strong/text()')
-    requiredtheatre="pvr"
+    requiredtheatre="forum"
     print theatres
     for i in theatres:
         if requiredtheatre in i.lower():
